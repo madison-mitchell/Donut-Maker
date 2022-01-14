@@ -1,0 +1,14 @@
+header,
+.donutInteraction {
+    margin: 10px, 20%;
+    text-align: center;
+    border: black solid 1px;
+}
+
+header {
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+}
