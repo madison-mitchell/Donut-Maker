@@ -1,14 +1,94 @@
-header,
-.donutInteraction {
-    margin: 10px, 20%;
+header {
+    margin: 30px 20%;
     text-align: center;
-    border: black solid 1px;
 }
 
-header {
-    margin: 10px 0;
+body {
+    background-image: url(/images/sprinkle-background.png);
+    background-position: center;
+    background-size: cover;
+    margin: 30px 10%;
+    background-color: lightblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 20px 20px;
+}
+
+#donutInteraction {
+    text-align: center;
 }
 
 img {
-    max-width: 100%;
+    background-color: transparent;
+    border: 0;
+}
+
+#donutImg {
+    max-width: 300px;
+}
+
+#cursorImg {
+    height: 70px;
+    margin: 10px 10px;
+}
+
+#storeImg {
+    width: 150px;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+}
+
+#multiplierButton {
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+    font-size: 16pt;
+    font-weight: 900;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+#upgrades {
+    text-align: center;
+}
+
+h1 {
+    font-size: xx-large;
+    margin: 0;
+}
+
+h2 {
+    font-size: x-large;
+    margin: 0;
+}
+
+h3 {
+    font-size: large;
+    margin: 0;
+}
+
+h4 {
+    font-size: medium;
+    margin: 0;
+}
+
+h5 {
+    font-size: small;
+    margin: 0;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
 }
