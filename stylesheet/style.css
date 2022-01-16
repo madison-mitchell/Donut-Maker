@@ -39,7 +39,7 @@ img {
 }
 
 #storeImg {
-    width: 150px;
+    max-width: 100%;
 }
 
 button {

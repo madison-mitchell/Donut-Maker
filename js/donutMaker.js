@@ -6,6 +6,8 @@ class DonutMaker {
         this._autoClickerCount = 0;
         this._autoClickerPrice = 100;
         this._autoClickerDonuts = 0;
+        this._multiplierCount = 1;
+        this._multiplierPrice = 10;
     }
 
     getDonutCount() {
@@ -21,11 +23,11 @@ class DonutMaker {
     }
 
     getMultiplier() {
-        return this._multiplier;
+        return this._multiplierCount;
     }
 
     getMultiplierPrice() {
-        return this._multiplierPrice;
+        return (this._multiplierPrice).toFixed(2);
     }
 
     clickDonut() {
@@ -50,6 +52,14 @@ class DonutMaker {
             this._autoClickerPrice *= 1.1;
         }
     }
+
+    buyMultiplier() {
+        if (this._donutCount >= this._multiplierPrice) {
+            this._donutCount -= this._multiplierPrice;
+            this._multiplierCount = Math.pow(1.2, _multiplierCount)
+            this._multiplierPrice *= 1.1;
+        }
+    }    
 }
 
 export default DonutMaker;

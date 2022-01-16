@@ -2,13 +2,18 @@ import DonutMaker from "./donutMaker.js"
 
 const buttonDonut = document.querySelector("#donutButton"); //Actual Donut Image & Button
 const buttonAutoClicker = document.querySelector("#addAutoClickerButton");
+const buttonMultiplier = document.querySelector("#multiplierButton"); //Multiplier button in HTML
 const headerDonutCount = document.querySelector("#donutCountHeader"); //Paragraph Element in HTML that lists Donut Count
-const headerAutoClickerCount = document.querySelector("#autoClickerCountHeader") //Paragraph Element in HTML that lists Auto Clicker Count
-const headerAutoClickerPrice = document.querySelector("#autoClickerPriceHeader") //Paragraph Element in HTML that lists Auto Clicker Count
+const headerAutoClickerCount = document.querySelector("#autoClickerCountHeader"); //Paragraph Element in HTML that lists Auto Clicker Count
+const headerAutoClickerPrice = document.querySelector("#autoClickerPriceHeader"); //Paragraph Element in HTML that lists Auto Clicker Count
+const headerMultiplierNumber = document.querySelector("#multiplierCountHeader");
+const headerMultiplierPrice = document.querySelector("#multiplierPriceHeader");
 
 const textDonutCountNumber = document.createElement("text"); //Creates text to go inside the headerDonutCount Element with the Donut Count
 const textAutoClickerNumber = document.createElement("text"); //Creates text to go inside the headerAutoClickerCount Element with the Auto Clicker Count
 const textAutoClickerPrice = document.createElement("text"); //Creates text to go inside the headerAutoClickerPrice Element with the Auto Clicker Count
+const textMultiplierNumber = document.createElement("text");
+const textMultiplierPrice = document.createElement("text");
 
 
 
@@ -20,6 +25,7 @@ renderPage();
 function renderPage() {
     updateDonutCount();
     addAutoClicker();
+    addMultiplier();
 }
 
 function updateDonutCount() {
@@ -35,6 +41,16 @@ function addAutoClicker() { //Updates Auto Clicker Count on page
     textAutoClickerPrice.innerText = currentAutoClickerPrice;
     headerAutoClickerCount.appendChild(textAutoClickerNumber); //Attaches the Text Element of the number of Auto Clickers to the Paragraph Element in HTML that lists Auto Clicker Count
     headerAutoClickerPrice.appendChild(textAutoClickerPrice); //Attaches the Text Element of the number of Auto Clickers to the Paragraph Element in HTML that lists Auto Clicker Count
+}
+
+function addMultiplier() { //Updates Multiplier on page
+    const currentMultiplier = donutMaker.getMultiplier(); //Grabs Multiplier and updates it to current count
+    const plusOneMultiplierButtonText = currentMultiplier + 1;
+    const currentMultiplierPrice = donutMaker.getMultiplierPrice(); //Grabs Multiplier Price and updates it to current count
+    textMultiplierNumber.innerText = plusOneMultiplierButtonText;
+    textMultiplierPrice.innerText = currentMultiplierPrice;
+    headerMultiplierNumber.appendChild(textMultiplierNumber); //Attaches the Text Element of the number of Auto Clickers to the Paragraph Element in HTML that lists Auto Clicker Count
+    headerMultiplierPrice.appendChild(textMultiplierPrice); //Attaches the Text Element of the number of Auto Clickers to the Paragraph Element in HTML that lists Auto Clicker Count
 }
 
 function buyAutoClicker() { 
