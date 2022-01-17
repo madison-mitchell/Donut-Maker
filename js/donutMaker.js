@@ -1,17 +1,21 @@
-const donutCount = document.querySelector("#donutCount");
+const headerDonutCount = document.querySelector("#donutCountHeader");
 
 class DonutMaker {
     constructor() {
-        this._donutCount = 2000;
+        this._donutCount = 99;
+        this._donutsPerSecond = 0;
         this._autoClickerCount = 0;
         this._autoClickerPrice = 100;
-        this._autoClickerDonuts = 0;
-        this._multiplierCount = 1;
+        this._multiplier = 1;
         this._multiplierPrice = 10;
     }
 
     getDonutCount() {
         return Math.floor(this._donutCount);
+    }
+
+    getDonutsPerSecond() {
+        return (this._donutsPerSecond = (1 * this._autoClickerCount * this._multiplier)).toFixed(2);
     }
 
     getAutoClickerCount() {
@@ -23,7 +27,7 @@ class DonutMaker {
     }
 
     getMultiplier() {
-        return this._multiplierCount;
+        return this._multiplier;
     }
 
     getMultiplierPrice() {
@@ -31,16 +35,14 @@ class DonutMaker {
     }
 
     clickDonut() {
-        this._donutCount += 1;
+        this._donutCount += 1 * this._multiplier;
     }
 
-    addDonutByAutoClicker() { //NOT WORKING; Not adding to actual donut count in constructor
+    addDonutByAutoClicker() {
         if (this._autoClickerCount >= 1) {
             setInterval(() => {
-                this._donutCount += this._autoClickerCount;
-                console.log('auto click count is ' + this._autoClickerCount);
-                console.log('donut count is ' + this._donutCount);
-                console.log('auto price is ' + this._autoClickerPrice);
+                this._donutCount += (this._autoClickerCount * 1) * this._multiplier;
+                headerDonutCount.innerText = this.getDonutCount();
             }, 1000);
         }
     }
@@ -56,10 +58,23 @@ class DonutMaker {
     buyMultiplier() {
         if (this._donutCount >= this._multiplierPrice) {
             this._donutCount -= this._multiplierPrice;
-            this._multiplierCount = Math.pow(1.2, _multiplierCount)
+            this._multiplier *= 1.2;
             this._multiplierPrice *= 1.1;
         }
-    }    
+    }
+
+    addDonutByMultiplier() {
+        const _multiplier = Math.pow(1.2, this._multiplier).toFixed(2);
+    }
+
+    resetGame() {
+        this._donutCount = 0;
+        this._donutsPerSecond = 0;
+        this._autoClickerCount = 0;
+        this._autoClickerPrice = 100;
+        this._multiplier = 1;
+        this._multiplierPrice = 10;
+    }
 }
 
 export default DonutMaker;
