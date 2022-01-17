@@ -10,7 +10,7 @@
 </head>
 
 <header>
-  <h3>Fred the Baker, Baking Company</h3>
+  <h2>Fred the Baker, Baking Company</h2>
   <nav>Created by <a href="http://madison-mitchell.github.io">Madison Mitchell</a> | Inspired by <a
       href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a>
   </nav>
@@ -21,37 +21,36 @@
   </div>
   <div class="container">
     <div id="counterSummary" class="center">
-      <h2>Store</h2>
-      <img id="storeImg" src="/images/store.png"><br><br>
+      <h2>Store</h2><br>
       <h3>Donuts: </h3>
       <h4 id="donutCountHeader"></h4><br>
+      <h5 id="donutsPerSecondTitle">Donuts per Second: </h5>
+      <h5 id="donutsPerSecondHeader"></h5>
+      <img id="storeImg" src="/images/store.png">
       <h3>Auto Clickers: </h3>
-      <h4 id="autoClickerCountHeader"></h4>
+      <h4 id="autoClickerCountHeader"></h4><br>
+      <h3>Donut Multiplier: </h3>
+      <h4 id="multiplierHeader"></h4>
     </div>
 
     <div id="donutInteraction" class=".center">
-      <button id="donutButton"><img id="donutImg" src="/images/donut.png"></button>
+      <button id="donutButton"><img id="donutImg" src="/images/donut.png"></button><br><br><br>
+      <button id="resetButton">Reset Game</button>
     </div>
 
     <div id="upgrades" class=".center">
       <h2>Upgrades: </h2>
       <h5>Price (In Donuts): </h5><br>
-      <h3 class="upgradeNameHeader">Auto Clicker</h3>
-      <button id="addAutoClickerButton">
-        <img id="cursorImg" src="/images/cursor.png">
-      </button>
+      <h3 class="upgradeNameHeader" id="autoClickerTitle">Auto Clicker</h3>
+      <button id="addAutoClickerButton"></button>
       <h4 id="autoClickerPriceHeader"></h4><br><br>
 
-      <h3 class="upgradeNameHeader">Multiplier</h3>
+      <h3 class="upgradeNameHeader" id="multiplierTitle">Donut Multiplier</h3>
       <button id="multiplierButton">
-        <text id="multiplierCountHeader">x</text>
+        <text id="nextMultiplierCountHeader"></text>
       </button>
       <h4 id="multiplierPriceHeader"></h4><br><br>
     </div>
-    <div class="clickMultiplier">
-
-    </div>
-  </div>
   </div>
   <script type="module" src="./js/donutMaker-App.js"></script>
 </body>
