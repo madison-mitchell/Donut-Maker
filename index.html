@@ -10,9 +10,24 @@
 </head>
 
 <header>
-  <h2>Fred the Baker, Baking Company</h2>
-  <nav>Created by <a href="http://madison-mitchell.github.io">Madison Mitchell</a> | Inspired by <a
-      href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a>
+  <div class="dropdown">
+    <h2>Fred the Baker, Baking Company</h2>
+    <div class="dropdown-content">
+      <p>Fred the Baker's Virtual Donut Company founded in 2022.</p>
+    </div>
+  </div><br>
+  <nav>
+    <div class="dropdown">Created by Madison Mitchell
+      <div class="dropdown-content">
+        <a href="http://madison-mitchell.github.io">Portfolio</a><br>
+        <a href="https://github.com/madison-mitchell">GitHub</a>
+      </div>
+    </div> |
+    <div class="dropdown">Inspired by Cooke Clicker
+      <div class="dropdown-content">Check out the <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a>
+        here.
+      </div>
+    </div>
   </nav>
 </header>
 
@@ -30,6 +45,7 @@
       <h3>Auto Clickers: </h3>
       <h4 id="autoClickerCountHeader"></h4><br>
       <h3>Donut Multiplier: </h3>
+      <h5 id="donutsPerClickTitle">Donuts per Click: </h5>
       <h4 id="multiplierHeader"></h4>
     </div>
 
@@ -46,6 +62,7 @@
       <h4 id="autoClickerPriceHeader"></h4><br><br>
 
       <h3 class="upgradeNameHeader" id="multiplierTitle">Donut Multiplier</h3>
+      <h5 id="donutsPerClickTitle">Next Available Multiplier: </h5>
       <button id="multiplierButton">
         <text id="nextMultiplierCountHeader"></text>
       </button>
