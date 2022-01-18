@@ -2,7 +2,7 @@ const headerDonutCount = document.querySelector("#donutCountHeader");
 
 class DonutMaker {
     constructor() {
-        this._donutCount = 100;
+        this._donutCount = 0;
         this._donutsPerSecond = 0;
         this._autoClickerCount = 0;
         this._autoClickerPrice = 100;
