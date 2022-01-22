@@ -24,14 +24,11 @@ function renderPage() {
     addAutoClicker();
     addMultiplier();
     updateDonutCount();
-    checkIfGreyedOutMultiplierButton();
-    checkIfGreyedOutAutoClickerButton();
 }
 
 function updateDonutCount() {
     headerDonutCount.innerText = donutMaker.getDonutCount();
     headerDonutsPerSecond.innerText = donutMaker.getDonutsPerSecond();
-    console.log(donutMaker._donutsPerSecond);
     checkIfGreyedOutMultiplierButton();
     checkIfGreyedOutAutoClickerButton();
 }
@@ -49,13 +46,13 @@ function addMultiplier() { //Updates Multiplier on page
 
 function clickDonut() {
     donutMaker.clickDonut(); //Runs function for when the Donut button is clicked to make X number of donuts
-    checkIfGreyedOutMultiplierButton();
-    checkIfGreyedOutAutoClickerButton();
+    updateDonutCount();
 }
 
 function buyAutoClicker() {
     donutMaker.buyAutoClicker(); //Pays for Auto Clicker, adds 1 and increases price
     addDonutByAutoClicker();
+    updateDonutCount();
 }
 
 function addDonutByAutoClicker() {
@@ -65,6 +62,7 @@ function addDonutByAutoClicker() {
 function buyMultiplier() {
     donutMaker.buyMultiplier(); //Pays for Auto Clicker, adds 1 and increases price
     addDonutByMultiplier();
+    updateDonutCount();
 }
 
 function addDonutByMultiplier() {
@@ -106,19 +104,16 @@ buttonDonut.addEventListener("click", () => {
         buttonDonut.style.opacity = "100%";
     }, 150);
     clickDonut();
-    updateDonutCount();
 });
 
 buttonAutoClicker.addEventListener("click", () => {
     buyAutoClicker();
-    updateDonutCount();
     addAutoClicker();
 })
 
 buttonMultiplier.addEventListener("click", () => {
     buyMultiplier();
     addMultiplier();
-    updateDonutCount();
 })
 
 buttonReset.addEventListener("click", () => {
