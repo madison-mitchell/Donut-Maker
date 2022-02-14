@@ -39,7 +39,7 @@ a:hover {
 }
 
 body {
-    background-image: url(./images/sprinkle-background.png);
+    background-image: url(images/sprinkle-background.png);
     background-position: center;
     background-size: cover;
     margin: 30px 10%;
@@ -87,7 +87,7 @@ button {
 }
 
 #resetButton {
-    background-image: url(/images/sprinkle-background.png);
+    background-image: url(images/sprinkle-background.png);
     background-size: 200%;
     border: 2px solid black;
     border-radius: 8px;
