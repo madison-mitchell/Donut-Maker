@@ -98,7 +98,7 @@ button {
 }
 
 #addAutoClickerButton {
-    background-image: url(/images/cursor.png);
+    background-image: url(../images/cursor.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
