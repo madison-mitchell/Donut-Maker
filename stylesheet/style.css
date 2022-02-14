@@ -153,3 +153,168 @@ h5 {
     width: 50%;
     padding: 10px;
 }
+
+@media only screen and (max-width: 800px) {
+    header {
+        margin: 10px 0;
+        padding: 10px 0;
+        text-align: center;
+        background-color: antiquewhite;
+        border-radius: 8px;
+    }
+
+    nav,
+    a {
+        padding: 5px 0 0 0;
+        font-size: 8pt;
+        color: darkgray;
+    }
+
+    a:hover {
+        color: #AA336A;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: antiquewhite;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    body {
+        background-image: url(../images/sprinkle-background.png);
+        background-position: center;
+        background-size: cover;
+        margin: 10px 10%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 15px;
+        text-align: center;
+        background-color: antiquewhite;
+        padding: 10px 10px;
+        border-radius: 8px;
+    }
+
+    #donutsPerSecondTitle,
+    #donutsPerSecondHeader,
+    #donutsPerClickTitle,
+    #donutsPerClickHeader {
+        color: grey;
+    }
+
+    #donutInteraction {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    img {
+        background-color: transparent;
+        border: 0;
+    }
+
+    #donutImg {
+        max-width: 200px;
+        margin: 50px auto 0 auto;
+    }
+
+    #storeImg {
+        max-width: 70%;
+        margin: 20px 0;
+    }
+
+    button {
+        background-color: transparent;
+        border: 0;
+    }
+
+    #resetButton {
+        background-image: url(../images/sprinkle-background.png);
+        background-size: 200%;
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 130px;
+        padding: 10px 0;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    #addAutoClickerButton {
+        background-image: url(../images/cursor.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100px;
+        width: 100px;
+        margin: 10px 10px;
+    }
+
+    #multiplierButton {
+        border: 2px solid black;
+        border-radius: 15px;
+        width: fit-content;
+        height: 60px;
+        font-size: 16pt;
+        font-weight: 900;
+        padding-top: 5px;
+        margin: 10px 0;
+    }
+
+    #upgrades {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: xx-large;
+        margin: 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: x-large;
+        margin: 0;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: large;
+        margin: 0;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: medium;
+        margin: 0;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: small;
+        margin: 0;
+        color: black;
+        text-align: center;
+    }
+
+    .center {
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+}
